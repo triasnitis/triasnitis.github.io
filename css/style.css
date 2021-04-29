@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: Calibri;
+    position: fixed;
+    background-color: #000000;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-in {
+    background-image: url("../image/bg3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.check-in h1 {
+    font-family: Poppins;
+    font-size: 40px;
+    margin: 0px;
+    padding: 300px 600px;
+    letter-spacing: 3px;
+    color: #a0beff;
+}
+
+#button-arrow{
+    background: rgba(25, 66, 141, 0);
+    /* padding: 300px 550px; */
+    margin: -300px 670px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+#button-arrow:hover .fa-arrow-down{
+    animation: do 1.5s none ease-in-out infinite;
+}
+
+.fa-arrow-down{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #445c8a;
+    font-size: 70px;
+}
+@keyframes do{
+    25%{top:40%;}
+    50%{top:55%;}
+    75%{top:45%;}
+    100%{top:50%;}
+}
+/* a {
+    text-decoration: none;
+} */
+
+/* .login-container {
+    background-image: url("../image/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.login-container h1 {
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin: 10px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    font-family: Magmawave Caps;
+}
+
+.login-container form {
+    background-color: #23243c;
+    box-shadow: 2px 2px 30px rgba(2px 2px 30px rgba(0, 0, 0, 0.2));
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container form input {
+    margin: 10px;
+    width: 250px;
+    height: 30px;
+    background-color: #434459;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.login-inputs {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-inputs form input::placeholder {
+    color: #727383;
+}
+
+.login-inputs form button {
+    text-transform: uppercase;
+    width: 110px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    font-weight: 600;
+    background-color: #3b70e0;
+    color: #fff;
+    font-size: 12px;
+    font-family: poppins;
+    letter-spacing: 1px;
+}
+
+.login-inputs form button:hover {
+    background-color: rgba(125, 49, 247);
+    transition: all ease 0.3s;
+}
+
+.forget {
+    color: #000000;
+    margin: -30px;
+    margin-right: -290px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #000000;
+}
+
+.forget-inputs {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.forget-inputs form input::placeholder {
+    color: #727383;
+}
+
+.forget-inputs form button {
+    text-transform: uppercase;
+    width: 110px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    font-weight: 600;
+    background-color: #3b70e0;
+    color: #fff;
+    font-size: 12px;
+    font-family: poppins;
+    letter-spacing: 1px;
+}
+
+.forget-inputs form button:hover {
+    background-color: rgba(125, 49, 247);
+    transition: all ease 0.3s;
+}
+
+.register {
+    color: #000000;
+    margin: 10px;
+    margin-right: 280px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #000000;
+}
+
+.register-inputs {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-inputs form input::placeholder {
+    color: #727383;
+}
+
+.register-inputs form button {
+    text-transform: uppercase;
+    width: 110px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    font-weight: 600;
+    background-color: #3b70e0;
+    color: #fff;
+    font-size: 12px;
+    font-family: poppins;
+    letter-spacing: 1px;
+}
+
+.register-inputs form button:hover {
+    background-color: rgba(125, 49, 247);
+    transition: all ease 0.3s;
+}
+
+.backLogin {
+    color: #000000;
+    margin: 10px;
+    margin-right: 280px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #000000;
+} */
