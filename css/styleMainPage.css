@@ -190,6 +190,13 @@ nav {
     transition: all ease 0.4s;
 }
 
+.draw {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .name {
     font-family: calibri;
     width: 500px;

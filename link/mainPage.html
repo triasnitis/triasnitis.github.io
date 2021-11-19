@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="w-box">
+            <div class="w-box"> <!-- for box animation -->
                 <div></div>
                 <div></div>
                 <div></div>
@@ -40,6 +40,12 @@
                     </ul>
                     <a href="#" class="lang">En</a>
                 </nav>
+
+                <div class="row">
+                    <div class="draw">
+                        <canvas id="myCanvasDraw" width="1500" height="580" style="border:1px solid rgba(0, 0, 0, 0)"></canvas>
+                    </div>
+                </div>
     
                 <div class = "name">
                     <!-- <p>Hello</p> -->
@@ -198,6 +204,7 @@
         </div>
 
         <script type="text/javascript" src="../controller/JQuery.js"></script>
+        <script type="text/javascript" src="../controller/DrawLine.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
                 $('.toggle').click(function(){
@@ -205,7 +212,6 @@
                     $('nav ul').toggleClass('active-menu')
                 })
             }) 
-
         </script>
     </body>
 </html>
