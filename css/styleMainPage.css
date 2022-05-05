@@ -703,6 +703,13 @@ p {
     letter-spacing: 2px;
 }
 
+.success-contact {
+    color: #ebebeb;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: calibri;
+}
+
 @media(max-width:2000px) {
     #main {
         background-size: 200px;
