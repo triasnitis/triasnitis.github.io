@@ -4,56 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Begin Again</title>
+    <title>Nitzz</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 </head>
 <body>
-    <!-- <body onload="LoadPage()"> -->
-    <section class="check-in">
-        <h1 data-text="BEGIN AGAIN">BEGIN AGAIN</h1>
-        <div id="button-arrow" onclick="changPage()"> <i class="fas fa-arrow-down"></i> </div>
-    </section>
+    <!-- <div class= "container-line">
+        <div class= "line-load"> </div>
+        <div class= "line-load"> </div>
+        <div class= "line-load"> </div>
+    </div> -->
 
+    <!-- <div class="explore">
+        <div class="button-explor">Explore</div>
+    </div> -->
+    <div class = "box-text">
+        <h2>Nitzz</h2>
+    </div>
 
-    <!-- <section class="login-container" id="loginPage"> -->
-        <!-- <div class="login-inputs" id="loginPanel">
-            <h1>Login</h1>
-            <form>
-                <input id="u_email" type="email" placeholder="sample@gmail.com">
-                <input id="u_password" type="password" placeholder="password">
-                <button type="button" onclick="CekValid()">Log In</button>
-            </form>
-            
-            <a href="#" onclick="changePanel('register')" class="register">Sign Up</a>
-            <a href="#" onclick="changePanel('forget')" class="forget">Forgot</a>
-            
+    <div class = parent-cube>
+        <div class = "top-cube"></div>
+        <div class = "bottom-cube"></div>
+        <div class = "left-cube">
+            <h2>Game</h2>
         </div>
-
-        <div class="forget-inputs" id="forgotPanel">
-            <h1>forget</h1>
-            <form>
-                <input id="f_email" type="f-email" placeholder="sample@gmail.com">
-                <button onclick="forgetProccess()">Send</button>
-            </form>
-            <a href="#" onclick="changePanel('login')" class="backLogin">Back</a>
+        <div class = "right-cube">
+            <h2>Contact</h2>
         </div>
-
-        <div class="register-inputs" id="registPanel">
-            <h1>Register</h1>
-            <form>
-                <input id="r_email" type="r-email" placeholder="sample@gmail.com">
-                <input id="r_psw" type="r-password" placeholder="password">
-                <input id="r_psw2" type="r-password" placeholder="password again">
-                <button onclick="RegisterConfirm()">Confirm</button>
-            </form>
-            <a href="#" onclick="changePanel('login')" class="backLogin">Back</a>
+        <div class = "front-cube" onclick="changPage()">
+            <h2>Explore</h2>
         </div>
+        <div class = "back-cube">
+            <h2>Exit</h2>
+        </div>
+    </div>
 
-        <div class="arrow">
-
-        </div> -->
-    <!-- </section> -->
+    <div class="shadow-cube"></div>
 </body>
 
     <script src="controller/LoginController.js"></script>
