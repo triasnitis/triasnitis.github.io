@@ -20,6 +20,10 @@ function changPage(){
     window.location.assign("link/welcome.html");
 }
 
+function changPageGame() {
+    window.location.assign("link/gamePage.html");
+}
+
 
 function CekValid(){
     
