@@ -1,96 +1,59 @@
 @charset "utf-8";
-
-/* .container-line
-{
-    position: absolute;
+html,
+body {
+    position: relative;
     height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: black;
 }
-
-.container-line .line-load
-{
-    position: relative;
-    height: 150px;
-    width: 20px;
-    margin: 10px;
-    background: linear-gradient(#15f4ee, #a200d4);
-    animation: animateCircle 3s linear infinite;
-}
-.container-line .line-load:nth-child(1)
-{
-    position: relative;
-    top: 0%;
-    left: 46%;
-}
-.container-line .line-load:nth-child(2)
-{
-    position: relative;
-    top: -35%;
-    left: 0%;
-}
-.container-line .line-load:nth-child(3)
-{
-    position: relative;
-    top: 0%;
-    left: -46%;
-}
-
-@keyframes animateCircle {
-    0%
-    {
-        transform: rotate(0deg);
-    }
-    100%
-    {
-        transform: rotate(350deg);
-    }
-} */
-
-/* .explore
-{
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50);
-}
-
-.button-explor
-{
-    position: relative;
-    text-align: center;
-    width: 150px;
-    padding: 10px;
-    font-size: 20px;
-    color: #15f4ee;
-    font-family: poppins;
-    font-weight: 400;
-    border: 5px solid #15f4ee;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    cursor: pointer;
-    border-radius: 100px;
-    transition: 1.5s;
-}
-
-.button-explor:hover
-{
-    box-shadow: 0 2px 20px 0 #15f4ee inset, 0 2px 20px 0 #15f4ee, 
-    0 2px 20px 0 #15f4ee inset, 0 2px 20px 0 #15f4ee;
-} */
-
-
-
-/* *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 100px;
-  } */
 
 body {
+    background: rgb(6, 66, 101);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 300px;
+    height: 300px;
+    transform: translate(10%, 90%);
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    background: aqua;
+}
+
+.swiper-slide h2 {
+    display: block;
+    color: rgb(6, 66, 101);
+    font-size: 30px;
+    position: absolute;
+
+    width: 100%;
+    top :30%;
+    display: flex;
+    justify-content: center;
+    
+    font-weight: 10;
+    letter-spacing: 0.1cm;
+}
+
+/* .swiper-slide img {
+display: block;
+width: 100%;
+} */
+
+
+/*
+>>> this region old rotation
+*/
+/* body {
     min-width: 100%;
     min-height: 100vh;
     display: flex;
@@ -123,7 +86,6 @@ body {
     color: #fff;
     position: relative;
     left :-40%;
-    /* font-size: 5em; */
     font-weight: 400;
     letter-spacing: 0.2cm;
     text-shadow:0 0 10px #15f4ee,
@@ -256,8 +218,100 @@ body {
     letter-spacing: 0.1cm;
 
     transform: rotateY(180deg);
+} */
+
+/*
+  >>> this oldest css
+  */
+/* .container-line
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.container-line .line-load
+{
+    position: relative;
+    height: 150px;
+    width: 20px;
+    margin: 10px;
+    background: linear-gradient(#15f4ee, #a200d4);
+    animation: animateCircle 3s linear infinite;
+}
+.container-line .line-load:nth-child(1)
+{
+    position: relative;
+    top: 0%;
+    left: 46%;
+}
+.container-line .line-load:nth-child(2)
+{
+    position: relative;
+    top: -35%;
+    left: 0%;
+}
+.container-line .line-load:nth-child(3)
+{
+    position: relative;
+    top: 0%;
+    left: -46%;
+}
+
+@keyframes animateCircle {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(350deg);
+    }
+} */
+
+/* .explore
+{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50);
+}
+
+.button-explor
+{
+    position: relative;
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+    color: #15f4ee;
+    font-family: poppins;
+    font-weight: 400;
+    border: 5px solid #15f4ee;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 1.5s;
+}
+
+.button-explor:hover
+{
+    box-shadow: 0 2px 20px 0 #15f4ee inset, 0 2px 20px 0 #15f4ee, 
+    0 2px 20px 0 #15f4ee inset, 0 2px 20px 0 #15f4ee;
+} */
+
+
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 100px;
+  } */
 
 
 

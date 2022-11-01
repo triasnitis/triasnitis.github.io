@@ -7,22 +7,64 @@
     <title>Nitzz</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 </head>
 <body>
-    <!-- <div class= "container-line">
-        <div class= "line-load"> </div>
-        <div class= "line-load"> </div>
-        <div class= "line-load"> </div>
-    </div> -->
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" onclick="changPageGame()"">
+            <h2>Game</h2>
+            <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+          </div>
+          <div class="swiper-slide">
+            <h2>maintenance</h2>
+            <!-- <img src="https://swiperjs.com/demos/images/nature-2.jpg" /> -->
+          </div>
+          <div class="swiper-slide" onclick="changPage()">
+            <h2>About Me</h2>
+            <!-- <img src="https://swiperjs.com/demos/images/nature-3.jpg" /> -->
+          </div>
+          <div class="swiper-slide">
+            <h2>Exit</h2>
+            <!-- <img src="https://swiperjs.com/demos/images/nature-4.jpg" /> -->
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+   
+    <div class="shadow-cube"></div>
 
-    <!-- <div class="explore">
-        <div class="button-explor">Explore</div>
-    </div> -->
-    <div class = "box-text">
-        <h2>Nitzz</h2>
-    </div>
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <div class = parent-cube>
+     <!-- Initialize Swiper -->
+     <script>
+       var swiper = new Swiper(".mySwiper", {
+         effect: "cube",
+         grabCursor: true,
+         cubeEffect: {
+           shadow: true,
+           slideShadows: true,
+           shadowOffset: 20,
+           shadowScale: 0.94,
+         },
+         pagination: {
+           el: ".swiper-pagination",
+         },
+       });
+     </script>
+</body>
+
+    <script src="controller/LoginController.js"></script>
+</html>
+
+
+<!-- old box rotation -->
+<!-- <div class = "box-text">
+    <h2>Nitzz</h2>
+</div> -->
+ <!-- <div class = parent-cube>
         <div class = "top-cube"></div>
         <div class = "bottom-cube"></div>
         <div class = "left-cube" onclick="changPageGame()">
@@ -37,10 +79,4 @@
         <div class = "back-cube">
             <h2>Exit</h2>
         </div>
-    </div>
-
-    <div class="shadow-cube"></div>
-</body>
-
-    <script src="controller/LoginController.js"></script>
-</html>
+    </div> -->
