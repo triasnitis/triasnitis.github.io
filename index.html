@@ -13,7 +13,7 @@
     <!-- Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" onclick="changPageGame()"">
+          <div class="swiper-slide" onclick="changPageGame()">
             <h2>Game</h2>
             <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
           </div>
@@ -40,6 +40,32 @@
 
      <!-- Initialize Swiper -->
      <script>
+        const isMobile = {
+          Android: function() {
+              return navigator.userAgent.match(/Android/i);
+          },
+          BlackBerry: function() {
+              return navigator.userAgent.match(/BlackBerry/i);
+          },
+          iOS: function() {
+              return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+          },
+          Opera: function() {
+              return navigator.userAgent.match(/Opera Mini/i);
+          },
+          Windows: function() {
+              return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+          },
+          any: function() {
+              return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+          }
+        };
+
+        if( isMobile.any() ){
+          alert('This website is not compatible for mobile');
+          window.close();
+        } 
+
        var swiper = new Swiper(".mySwiper", {
          effect: "cube",
          grabCursor: true,
@@ -54,6 +80,22 @@
          },
        });
      </script>
+
+
+     <svg 
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+       width="800" height="600" >
+      
+        <path id = "animate1" stoke-linejoin="round" stoke-linecap="round" stroke-miterlimit="10"/>
+
+        <path id = "animate2" stoke-linejoin="round" stoke-linecap="round" stroke-miterlimit="10"/>
+
+        <path id = "animate3" stoke-linejoin="round" stoke-linecap="round" stroke-miterlimit="10"/>
+
+        <path id = "animate4" stoke-linejoin="round" stoke-linecap="round" stroke-miterlimit="10"/>
+
+      </svg> 
 </body>
 
     <script src="controller/LoginController.js"></script>
