@@ -1,0 +1,22 @@
+System.register("chunks:///_virtual/FastClickManager.ts",["./rollupPluginModLoBabelHelpers.js","cc"],(function(t){"use strict";var i,e,r,l,n,o,a,s,u,c,h;return{setters:[function(t){i=t.applyDecoratedDescriptor,e=t.inheritsLoose,r=t.initializerDefineProperty,l=t.assertThisInitialized},function(t){n=t.cclegacy,o=t._decorator,a=t.Label,s=t.Node,u=t.ProgressBar,c=t.CCInteger,h=t.Component}],execute:function(){var p,g,b,m,f,v,k,d,C,y,S,T,P,L,A,w,z,N,F,M,O;n._RF.push({},"792709+9TxNjZAjhtyc5XTe","FastClickManager",void 0);var U=o.ccclass,G=o.property;t("FastClickManager",(p=U("FastClickManager"),g=G(a),b=G(a),m=G(a),f=G(a),v=G(s),k=G(u),d=G(c),C=G(Number),y=G(String),p((P=i((T=function(t){function i(){for(var i,e=arguments.length,n=new Array(e),o=0;o<e;o++)n[o]=arguments[o];return i=t.call.apply(t,[this].concat(n))||this,r(i,"lblPopUp",P,l(i)),r(i,"lblLavel",L,l(i)),r(i,"lblScore",A,l(i)),r(i,"lblValueTimer",w,l(i)),r(i,"nodePopup",z,l(i)),r(i,"progressLevel",N,l(i)),r(i,"timeNum",F,l(i)),r(i,"rangArr",M,l(i)),r(i,"levelArr",O,l(i)),i.totalClick=0,i.totalTime=0,i.callbackScheduleTime=void 0,i.isPlay=!1,i}e(i,t);var n=i.prototype;return n.onLoad=function(){this.setOpenerPopup(!1),this.totalTime=this.timeNum},n.onPlayAgain=function(){this.setOpenerPopup(!1),this.isPlay=!1,this.timeNum=this.totalTime,this.totalClick=0,this.lblScore.string=this.totalClick.toString(),this.progressLevel.progress=0},n.onClickGame=function(){this.isPlay||(this.isPlay=!0,this.countdownTimer()),this.countClick()},n.countClick=function(){this.totalClick++,this.lblScore.string=this.totalClick.toString(),this.progressLevel.progress=.01*this.totalClick},n.resetGame=function(){this.setOpenerPopup(!0),this.totalClick=0,this.lblScore.string=this.totalClick.toString(),this.progressLevel.progress=0},n.countdownTimer=function(){this.lblValueTimer.string=this.timeNum.toString(),this.callbackScheduleTime=function(){this.timeNum--,this.lblValueTimer.string=this.timeNum.toString(),0==this.timeNum&&(this.unschedule(this.callbackScheduleTime),this.resetGame())},this.schedule(this.callbackScheduleTime,1)},n.setOpenerPopup=function(t){if(this.nodePopup.active=t,t){if(this.lblPopUp.string="You Made "+this.totalClick.toString()+" Click in "+this.totalTime.toString()+" Second",this.totalClick<this.rangArr[1])return void(this.lblLavel.string=this.levelArr[0].toString());if(this.totalClick<this.rangArr[2])return void(this.lblLavel.string=this.levelArr[1].toString());if(this.totalClick>this.rangArr[2])return void(this.lblLavel.string=this.levelArr[3].toString())}},i}(h)).prototype,"lblPopUp",[g],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),L=i(T.prototype,"lblLavel",[b],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),A=i(T.prototype,"lblScore",[m],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),w=i(T.prototype,"lblValueTimer",[f],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),z=i(T.prototype,"nodePopup",[v],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),N=i(T.prototype,"progressLevel",[k],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),F=i(T.prototype,"timeNum",[d],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return 0}}),M=i(T.prototype,"rangArr",[C],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return[0,50,100]}}),O=i(T.prototype,"levelArr",[y],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return[" TURTLE !! "," OCTOPUS !! "," TIGER !! "]}}),S=T))||S));n._RF.pop()}}}));
+
+System.register("chunks:///_virtual/main",["./FastClickManager.ts"],(function(){"use strict";return{setters:[null],execute:function(){}}}));
+
+(function(r) {
+  r('virtual:///prerequisite-imports/main', 'chunks:///_virtual/main'); 
+})(function(mid, cid) {
+    System.register(mid, [cid], function (_export, _context) {
+    return {
+        setters: [function(_m) {
+            var _exportObj = {};
+
+            for (var _key in _m) {
+              if (_key !== "default" && _key !== "__esModule") _exportObj[_key] = _m[_key];
+            }
+      
+            _export(_exportObj);
+        }],
+        execute: function () { }
+    };
+    });
+});
