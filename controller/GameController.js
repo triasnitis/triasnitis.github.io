@@ -7,5 +7,8 @@ function changeToGame(_indexGame) {
         case 2:
             window.location.assign("../game/FastClickGame/index.html");
             break
+        case 3:
+            window.location.assign("../game/FaceOperation/index.html");
+            break
     }
 }
