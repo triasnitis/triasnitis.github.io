@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="../css/styleWelcome.css">
+
+</head>
+<body>
+    <section class="welcome-container" id=welcomePage>
+        <div class = "animation">
+            <span>welcome</span>
+        </div>
+    </section>
+
+    <script>
+        setTimeout(function(){ 
+            // if(localStorage.getItem('loginSuccess') == "true"){
+                window.location.assign("mainPage.html");
+            // }else{
+            //     alert("your not login!!");
+            // }
+        }, 3000);
+        
+    </script>
+
+</body>
+</html>

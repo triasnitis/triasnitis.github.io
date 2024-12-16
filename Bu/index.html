@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitzz</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" onclick="changPageGame()">
+            <h2>Game</h2>
+            <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+          </div>
+          <div class="swiper-slide">
+            <h2>maintenance</h2>
+            <!-- <img src="https://swiperjs.com/demos/images/nature-2.jpg" /> -->
+          </div>
+          <div class="swiper-slide" onclick="changPage()">
+            <h2>About Me</h2>
+            <!-- <img src="https://swiperjs.com/demos/images/nature-3.jpg" /> -->
+          </div>
+          <div class="swiper-slide">
+            <h2>Exit</h2>
+            <!-- <img src="https://swiperjs.com/demos/images/nature-4.jpg" /> -->
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+   
+    <div class="shadow-cube"></div>
+
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+        const isMobile = {
+          Android: function() {
+              return navigator.userAgent.match(/Android/i);
+          },
+          BlackBerry: function() {
+              return navigator.userAgent.match(/BlackBerry/i);
+          },
+          iOS: function() {
+              return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+          },
+          Opera: function() {
+              return navigator.userAgent.match(/Opera Mini/i);
+          },
+          Windows: function() {
+              return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+          },
+          any: function() {
+              return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+          }
+        };
+
+        if( isMobile.any() ){
+          alert('This website is not compatible for mobile');
+          window.close();
+        } 
+
+       var swiper = new Swiper(".mySwiper", {
+         effect: "cube",
+         grabCursor: true,
+         cubeEffect: {
+           shadow: true,
+           slideShadows: true,
+           shadowOffset: 20,
+           shadowScale: 0.94,
+         },
+         pagination: {
+           el: ".swiper-pagination",
+         },
+       });
+     </script>
+
+
+     <svg 
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+       width="800" height="600" >
+      
+        <path id = "animate1" stoke-linejoin="round" stoke-linecap="round" stroke-miterlimit="10"/>
+
+        <path id = "animate2" stoke-linejoin="round" stoke-linecap="round" stroke-miterlimit="10"/>
+
+        <path id = "animate3" stoke-linejoin="round" stoke-linecap="round" stroke-miterlimit="10"/>
+
+        <path id = "animate4" stoke-linejoin="round" stoke-linecap="round" stroke-miterlimit="10"/>
+
+      </svg> 
+</body>
+
+    <script src="controller/LoginController.js"></script>
+</html>
+
+
+<!-- old box rotation -->
+<!-- <div class = "box-text">
+    <h2>Nitzz</h2>
+</div> -->
+ <!-- <div class = parent-cube>
+        <div class = "top-cube"></div>
+        <div class = "bottom-cube"></div>
+        <div class = "left-cube" onclick="changPageGame()">
+            <h2>Game</h2>
+        </div>
+        <div class = "right-cube">
+            <h2>Contact</h2>
+        </div>
+        <div class = "front-cube" onclick="changPage()">
+            <h2>Explore</h2>
+        </div>
+        <div class = "back-cube">
+            <h2>Exit</h2>
+        </div>
+    </div> -->
