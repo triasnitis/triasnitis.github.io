@@ -1,59 +1,211 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+} */
+
+html, 
+body {
+  width: 100%;
+  height: 100%;
 }
 
-.swiper {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+body {
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(#021027, #000000);
 }
 
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
+/* ------------ Slider Area */
+
+swiper-container {
+  width: 240px;
+  height: 320px;
+  padding-top: 15%;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
+swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+swiper-slide img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  position: absolute; /* Posisi absolut untuk menempatkan teks di atas gambar */
+  top: 20px; /* Letakkan judul di bagian bawah slide */
+  left: 40px; /* Jarak dari sisi kiri */
+  padding: 10px 15px; /* Memberi ruang di sekitar teks */
+  background-color: rgba(0, 0, 0, 0.6); /* Background gelap dengan transparansi */
+  border-radius: 10px; /* Membuat sudutnya sedikit melengkung */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bottom-content {
+  position: absolute;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+  align-items: center;
+}
+
+/* Gaya untuk ikon */
+.bottom-content .icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* Gaya untuk tombol Play */
+.bottom-content .play-btn {
+  background: rgba(0, 0, 0, 0.6); 
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px; 
+  cursor: pointer;
+}
+
+/* Efek saat hover tombol Play */
+.bottom-content .play-btn:hover {
+  background: rgba(0, 0, 0, 0.8); 
+}
+
+swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+}
+
+swiper-slide:nth-child(2n) {
+  background-color: rgb(0, 140, 255);
+}
+
+swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+}
+
+swiper-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+}
+
+swiper-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+}
+
+swiper-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+swiper-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+swiper-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+swiper-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+swiper-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
 }
 
 
+/* ------------ Animation Area */
 
-/* html,
-      body {
-        position: relative;
-        height: 100%;
-      }
+.CircleAnim div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 30%;
+  mix-blend-mode: screen;
+  background-image: radial-gradient(#99ffff, #99ffff 10%, rgba(153, 255, 255, 0) 36%);
+}
 
-      body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-      }
+.CircleAnim div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  animation: animate 10s linear infinite;
+}
 
-      .swiper {
-        width: 100%;
-        padding-top: 50px;
-        padding-bottom: 50px;
-      }
+.CircleAnim div:nth-child(2) {
+  top: 70%;
+  top: 50%;
+  animation: animate 7s linear infinite;
+}
 
-      .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        width: 300px;
-        height: 300px;
-      }
+.CircleAnim div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  animation: animate 9s linear infinite;
+}
 
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-      } */
+.CircleAnim div:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+
+.CircleAnim div:nth-child(5) {
+  top: 67%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+
+.CircleAnim div:nth-child(6) {
+  top: 80%;
+  left: 70%;
+  animation: animate 12s linear infinite;
+}
+
+.CircleAnim div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  animation: animate 16s linear infinite;
+}
+
+.CircleAnim div:nth-child(8) {
+  top: 32%;
+  left: 25%;
+  animation: animate 16s linear infinite;
+}
+
+.CircleAnim div:nth-child(9) {
+  top: 90%;
+  left: 25%;
+  animation: animate 9s linear infinite;
+}
+
+.CircleAnim div:nth-child(10) {
+  top: 20%;
+  left: 80%;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+      transform: scale(0) translateY(0) rotate(0);
+      opacity: 1;
+  }
+
+  100% {
+      transform: scale(1.3) translateY(-90px) rotate(360deg);
+      opacity: 0;
+  }
+}

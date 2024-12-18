@@ -7,70 +7,46 @@
     </head>
     <script src="../controller/GameController.js"></script>
     <body>
-      <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" onclick="changeToGame(1)">
-          <img src="../image/GameMatch.png" />
-          <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
-        </div>
-        <div class="swiper-slide" onclick="changeToGame(2)">
-          <img src="../image/fastClick.png" />
-          <!-- <img src="https://swiperjs.com/demos/images/nature-2.jpg" /> -->
-        </div>
-        <div class="swiper-slide" onclick="changeToGame(3)">
-          <img src="../image/FaceOperation.png" />
-          <!-- <img src="https://swiperjs.com/demos/images/nature-3.jpg" /> -->
-        </div>
-        <div class="swiper-slide">
-          <img src="../image/ComingSoon.png" />
-          <!-- <img src="https://swiperjs.com/demos/images/nature-4.jpg" /> -->
-        </div>
-        <div class="swiper-slide">
-          <img src="../image/ComingSoon.png" />
-          <!-- <img src="https://swiperjs.com/demos/images/nature-5.jpg" /> -->
-        </div>
-        <div class="swiper-slide">
-          <img src="../image/ComingSoon.png" />
-          <!-- <img src="https://swiperjs.com/demos/images/nature-6.jpg" /> -->
-        </div>
-        <div class="swiper-slide">
-          <img src="../image/ComingSoon.png" />
-          <!-- <img src="https://swiperjs.com/demos/images/nature-7.jpg" /> -->
-        </div>
-        <div class="swiper-slide">
-          <img src="../image/ComingSoon.png" />
-          <!-- <img src="https://swiperjs.com/demos/images/nature-8.jpg" /> -->
-        </div>
-        <div class="swiper-slide">
-          <img src="../image/ComingSoon.png" />
-          <!-- <img src="https://swiperjs.com/demos/images/nature-9.jpg" /> -->
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
+      <!-- Animation Background -->
+      <div class="CircleAnim"> <!-- for box animation -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-      });
-    </script>
+    <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+      <swiper-slide>
+        <img src="../image/FaceOperation.png" />
+        <div class="title">Face Operation</div>
+        <div class="bottom-content">
+          <img class="icon" src="../image/unity.png" alt="Icon" />
+          <button class="play-btn" onclick="changeToGame(3)">Play</button>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../image/fastClick.png" />
+        <div class="title">Clickers Game</div>
+        <div class="bottom-content">
+          <img class="icon" src="../image/CocosCreator.png" alt="Icon" />
+          <button class="play-btn" onclick="changeToGame(2)">Play</button>
+        </div>
+      </swiper-slide>
+      <swiper-slide>Slide 3</swiper-slide>
+      <swiper-slide>Slide 4</swiper-slide>
+      <swiper-slide>Slide 5</swiper-slide>
+      <swiper-slide>Slide 6</swiper-slide>
+      <swiper-slide>Slide 7</swiper-slide>
+      <swiper-slide>Slide 8</swiper-slide>
+      <swiper-slide>Slide 9</swiper-slide>
+    </swiper-container>
+      
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     </body>
 </html>
