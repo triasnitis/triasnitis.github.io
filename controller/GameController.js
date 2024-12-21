@@ -11,7 +11,7 @@ function changeToGame(_indexGame) {
             window.location.assign("../game/FaceOperation/index.html");
             break
         case 4:
-            window.location.assign("../game/FallItem/index.html");
+            window.location.assign("../game/FallItem-M/index.html");
             break
     }
 }
