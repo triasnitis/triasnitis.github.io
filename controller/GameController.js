@@ -13,5 +13,8 @@ function changeToGame(_indexGame) {
         case 4:
             window.location.assign("../game/FallItem-M/index.html");
             break
+        case 5:
+            window.location.assign("../game/loopAtackBuild/index.html");
+            break
     }
 }
