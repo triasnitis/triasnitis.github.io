@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trias Nitis | Game Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <style>
+    body { font-family: 'Quicksand', sans-serif; }
+    .fade-in { opacity: 0; transform: translateY(10px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .fade-in.show { opacity: 1; transform: translateY(0); }
+    .game-card { transition: transform 0.3s ease; }
+    .game-card:hover { transform: translateY(-5px); }
+  </style>
+  <script src="../controller/GameController.js"></script>
+</head>
+<body class="bg-pink-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+  <!-- Navbar -->
+  <header class="flex justify-between items-center p-4 bg-pink-200 dark:bg-gray-800 shadow sticky top-0 z-10">
+    <a href="../index.html" class="text-xl font-bold text-pink-700 dark:text-pink-300">← Back to Home</a>
+    <div class="flex gap-2 items-center">
+      <button onclick="toggleDarkMode()" class="text-xl" id="theme-toggle">
+        <span class="dark:hidden">🌙</span>
+        <span class="hidden dark:inline">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Game Portfolio Section -->
+  <section class="py-12 px-4 max-w-6xl mx-auto">
+    <h1 class="text-4xl font-bold text-center text-pink-700 dark:text-pink-300 mb-12 fade-in">🎮 My Game Projects</h1>
+
+    <!-- Unity Projects -->
+    <div id="unity" class="mb-16 fade-in">
+      <h2 class="text-3xl font-bold text-pink-600 dark:text-pink-300 mb-6 flex items-center">
+        <img src="../image/unity.png" alt="Unity Logo" class="h-8 mr-3"> Unity Games
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Game 1 -->
+        <div class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-pink-200 dark:border-gray-700">
+          <img src="../image/SweetCandy.png" alt="Sweet Candy" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-pink-700 dark:text-pink-300 mb-2">Sweet Candy Match</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">C#</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">2D</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">Puzzle</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Game puzzle like cancy crush.</p>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <p><span class="font-semibold">Release:</span> january 2024</p>
+              <p><span class="font-semibold">Features:</span> Dynamic puzzle system, particle effects, sistem quest</p>
+            </div>
+            <div class="mt-4">
+                <button onclick="changeToGame(1)" 
+                   class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow transition">
+                   🎮 Play Now
+                </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Game 2 -->
+        <div class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-pink-200 dark:border-gray-700">
+          <img src="../image/LoopAttack.png" alt="loop battle Screenshot" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-pink-700 dark:text-pink-300 mb-2">Loop Battle</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">C#</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">2D</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">Turn Base</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Games that implement a tour base system like the Honkai: Star Rail game </p>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <p><span class="font-semibold">Release:</span> December 2024</p>
+              <p><span class="font-semibold">Features:</span> Turn base, 2d, character variable</p>
+            </div>
+            <div class="mt-4">
+                <button onclick="changeToGame(5)" 
+                   class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow transition">
+                   🎮 Play Now
+                </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 3 -->
+        <div class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-pink-200 dark:border-gray-700">
+          <img src="../image/FaceOperation.png" alt="Face Operation Screenshot" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-pink-700 dark:text-pink-300 mb-2">Face Operation</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">C#</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">3D</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4"> Just operate the character with various expressions in one face</p>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <p><span class="font-semibold">Release:</span> August 2024</p>
+              <p><span class="font-semibold">Features:</span> 3d </p>
+            </div>
+            <div class="mt-4">
+                <button onclick="changeToGame(3)" 
+                   class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow transition">
+                   🎮 Play Now
+                </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 2 -->
+        <div class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-pink-200 dark:border-gray-700">
+          <img src="../image/turnbase_ball.png" alt="loop battle Screenshot" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-pink-700 dark:text-pink-300 mb-2">Turn base ball</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">C#</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">3D</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">Turn Base</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              A soccer game, where the turn base occurs between the player and the goalkeeper to compete for the ball.</p>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <p><span class="font-semibold">Release:</span> February 2025</p>
+              <p><span class="font-semibold">Features:</span> Turn base, 3D, Soccer</p>
+            </div>
+            <div class="mt-4">
+                <button onclick="changeToGame(5)" 
+                   class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow transition">
+                   🎮 Play Now
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Cocos Creator Projects -->
+    <div id="cocos" class="mb-16 fade-in">
+      <h2 class="text-3xl font-bold text-pink-600 dark:text-pink-300 mb-6 flex items-center">
+        <img src="../image/CocosCreator.png" alt="Cocos Creator Logo" class="h-8 mr-3"> Cocos Creator Games
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Game 1 -->
+        <div class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-pink-200 dark:border-gray-700">
+          <img src="../image/fastClick.png" alt="Fast Click Game Screenshot" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-pink-700 dark:text-pink-300 mb-2">Fast Click Game</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">Ts</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">2D</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">Clicker</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Game to see your clicking ability</p>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <p><span class="font-semibold">Release:</span> March 2023</p>
+              <p><span class="font-semibold">Features:</span> clicker</p>
+            </div>
+            <div class="mt-4">
+              <button onclick="changeToGame(2)" 
+                 class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow transition">
+                 🎮 Play Now
+              </button>
+          </div>
+          </div>
+        </div>
+
+        <!-- Game 2 -->
+        <div class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-pink-200 dark:border-gray-700">
+          <img src="../image/FallItem.png" alt="Fast Click Game Screenshot" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-pink-700 dark:text-pink-300 mb-2">Fall Item Game</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">Ts</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">2D</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">catch item</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Game of catching items falling from above</p>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <p><span class="font-semibold">Release:</span> April 2026</p>
+              <p><span class="font-semibold">Features:</span> catching</p>
+            </div>
+            <div class="mt-4">
+              <button onclick="changeToGame(4)" 
+                 class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow transition">
+                 🎮 Play Now
+              </button>
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Ren'Py Projects -->
+    <div id="renpy" class="mb-16 fade-in">
+      <h2 class="text-3xl font-bold text-pink-600 dark:text-pink-300 mb-6 flex items-center">
+        <img src="../image/renpy.png" alt="Ren'Py Logo" class="h-8 mr-3"> Ren'Py Visual Novels
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Game 1 -->
+        <div class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-pink-200 dark:border-gray-700">
+          <img src="../image/ComingSoon.png" alt="coming soon Screenshot" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-pink-700 dark:text-pink-300 mb-2">coming soon</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">Python</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">Visual Novel</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">Dating Sim</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">coming soon.</p>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <p><span class="font-semibold">Release:</span> may 2025</p>
+              <p><span class="font-semibold">Features:</span> Drag & drop item, sistem relationship, multiple endings</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- .NET Projects -->
+    <div id="dotnet" class="fade-in">
+      <h2 class="text-3xl font-bold text-pink-600 dark:text-pink-300 mb-6 flex items-center">
+        <img src="../image/net2.png" alt=".NET Logo" class="h-8 mr-3"> .NET Applications
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- App 1 -->
+        <div class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-pink-200 dark:border-gray-700">
+          <img src="../image/ComingSoon.png" alt="Inventory App Screenshot" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-pink-700 dark:text-pink-300 mb-2">Calculator</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">C#</span>
+              <span class="bg-pink-100 dark:bg-gray-700 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">WinForms</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">coming soon.</p>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <p><span class="font-semibold">Release:</span> may 2025</p>
+              <p><span class="font-semibold">Features:</span> Calculator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Scroll animation
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add("show");
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+      // Dark mode preference
+      if (localStorage.getItem('theme') === 'dark' || 
+          (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    });
+
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
+  </script>
+</body>
+</html>

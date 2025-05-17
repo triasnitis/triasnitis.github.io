@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitzz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="css/styleMainMenu.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Sassy+Frass&family=Yellowtail&display=swap">
+</head>
+<body>
+  <!-- partial:index.partial.html -->
+<div class="background"></div>
+<div class="woolf"></div>
+
+<div class="content-container">
+	<div class="content">
+
+		<h1>Game Developer</h1>
+		<hr>
+		<h2>by Trias Nitis Lazuardi</h2>
+
+		<p><span>M</span>y name is Trias Nitis Lazuardi, and I graduated from Gunadarma University in 2017. Since 2018, I have been working as a Game Developer</p>
+
+        <!-- Unordered list for buttons -->
+        <button type="button" onclick="showAboutMe()"> >>> About Me</button>
+        <button type="button" onclick="showMyGame()"> >>> My Game</button>
+	</div>
+</div>
+<!-- partial -->
+  
+</body>
+    <script>
+        function showMyGame() {
+            window.location.assign("link/gamePage.html");
+        }
+
+        function showAboutMe() {
+            window.location.assign("link/welcome.html");
+        }
+    </script>
+</html>
