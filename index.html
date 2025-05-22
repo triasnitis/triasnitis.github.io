@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <script src="https://triasnitis.github.io/controller/GameController.js"></script>
+  <script src="./controller/GameController.js"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -153,9 +153,9 @@
     <div class="absolute -top-20 -left-20 w-64 h-64 bg-purple-300/10 rounded-full filter blur-xl animate-float animation-delay-1000"></div>
     
     <h2 class="text-3xl font-bold text-center text-pink-600 dark:text-pink-300 mb-8 cute-font flex items-center justify-center">
-      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_isdxvulo.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
+      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_obhph3sh.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
       <span class="mx-2">My skills</span>
-      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_isdxvulo.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
+      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_obhph3sh.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
     </h2>
     
     <div class="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
@@ -208,7 +208,7 @@
     
     <h2 class="text-3xl font-bold text-center text-pink-600 dark:text-pink-300 mb-12 cute-font flex items-center justify-center">
       <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_soCRuE.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-      <span class="mx-3">Proyek Terbaru</span>
+      <span class="mx-3">New Project</span>
       <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_soCRuE.json" background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay></lottie-player>
     </h2>
     
@@ -216,16 +216,17 @@
       <!-- Project 1 -->
       <div class="bg-pink-50/90 dark:bg-gray-800/90 rounded-2xl shadow-xl p-6 border-2 border-pink-200/50 dark:border-gray-700/50 hover:border-pink-300 dark:hover:border-pink-500 transition transform hover:-translate-y-2 group">
         <div class="relative overflow-hidden rounded-lg mb-4 h-48">
-          <img src="./image/ComingSoon.png" alt="snake io" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          <!-- <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
-            <button onclick="changeToGame(1)" class="bg-green-400 hover:bg-green-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg cute-btn transform transition duration-300 hover:scale-105 flex items-center mx-auto">
-              <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_obhph3sh.json" background="transparent" speed="1" style="width: 20px; height: 20px;" loop autoplay></lottie-player>
-              <span class="ml-2">comming soon</span>
+          <img src="./image/snakeGame.png" alt="snake io" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+            <button onclick="changeToGameFromMain(7)" class="relative z-10 bg-pink-400 hover:bg-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg cute-btn transform transition duration-300 hover:scale-105 flex items-center mx-auto">
+              <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_soCRuE.json" background="transparent" speed="1" style="width: 20px; height: 20px; pointer-events: none;" loop autoplay></lottie-player>
+              <!-- <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_obhph3sh.json" background="transparent" speed="1" style="width: 30px; height: 30px;" loop autoplay></lottie-player> -->
+              <span class="ml-2">Play</span>
             </button>
-          </div> -->
+          </div>
         </div>
         <h3 class="text-xl font-bold text-pink-700 dark:text-pink-300 mb-2 cute-font">Snake IO</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4"> Snake eating fruit game...</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4"> A fast-paced snake game: eat to grow, avoid walls, and survive as long as possible!.</p>
         <div class="flex flex-wrap gap-2">
           <span class="bg-pink-200/50 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">Unity</span>
           <span class="bg-pink-200/50 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200 text-xs px-3 py-1 rounded-full">C#</span>
